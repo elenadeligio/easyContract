@@ -1,0 +1,217 @@
+<link rel="stylesheet" href="/css/projectoverview.css">
+
+<h2 class="center">Projektübersicht</h2>
+
+<br>
+
+<div class="text-right">
+    <a href="/projectoverview/newProject" class="btn btn-primary"><i class="fa fa-plus-circle"></i> | Neues Projekt
+        erstellen</a>
+</div>
+<br>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('allgemein')"> Allgemein</button>
+    <button class="btn" onclick="filterSelection('finanzen')"> Finanzen</button>
+    <button class="btn" onclick="filterSelection('beratung')"> Beratung</button>
+    <button class="btn" onclick="filterSelection('verwaltung')"> Verwaltung</button>
+    <button class="btn" onclick="filterSelection('koop')"> Kooperationen</button>
+    <button class="btn" onclick="filterSelection('ausbildung')"> Ausbildung</button>
+    <button class="btn" onclick="filterSelection('oeffi')"> Öffentlichkeit</button>
+    <button class="btn" onclick="filterSelection('archiv')"> Erledigt</button>
+</div>
+
+<br><br>
+
+<div class="filterDiv allgemein">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="allgemein">Allgemein</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Allgemein" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv finanzen">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="finanzen">Finanzen</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Finanzen" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv beratung">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="beratung">Beratung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Beratung" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv verwaltung">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="verwaltung">Verwaltung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Verwaltung" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv koop">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="koop">Kooperation</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Kooperation" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv ausbildung">
+
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="ausbildung">Ausbildung</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Ausbildung" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv oeffi">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="oeffi">Öffentlichkeit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Öffentlichkeit" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>
+
+<div class="filterDiv archiv">
+    <table align="left" class="tableSmall">
+        <thead>
+            <tr>
+                <th class="archiv">Erledigt</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% projects.forEach(project=> { %>
+                <%if (project.category=="Erledigt" ) { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/projectoverview/${project._id}` %>" target="_blank">
+                                <%= project.title %>
+                            </a>
+                        </td>
+                    </tr>
+                    <%}%>
+                        <% }); %>
+        </tbody>
+    </table>
+</div>

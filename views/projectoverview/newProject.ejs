@@ -1,0 +1,45 @@
+<ul class="pager">
+    <li class="previous"><a href="/projectoverview">&larr; Zurück</a></li>
+</ul>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-12 login-form-1">
+            <h2>Neues Projekt erstellen:</h2>
+            <div class="jumbotron">
+                <form class="form-signin" action="<%=`/projectoverview/create`%>" method="POST">
+                    <div class="form-group">
+                        <label for="inputTitle">Titel</label>
+                        <input type="text" name="title" id="inputTitle" class="form-control" placeholder="Titel" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDetails">Infos/Details übers Projekt</label>
+                        <input type="text" name="details" id="inputDetails" class="form-control" placeholder="Details" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDate">Fälligkeitsdatum</label>
+                        <input type="text" name="date" id="inputDate" class="form-control" placeholder="Fälligkeitsdatum" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputNotes">Notizen</label>
+                        <input type="text" name="notes" id="inputNotes" class="form-control" placeholder="Notizen" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCategory">Kategorie</label>
+                        <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" autofocus>
+                <option>Allgemein</option>
+                <option>Finanzen</option>
+                <option>Beratung</option>
+                <option>Verwaltung</option>
+                <option>Kooperation</option>
+                <option>Ausbildung</option>
+                <option>Öffentlichkeit</option>
+                <option>Erledigt</option>
+            </select>
+        </div>
+        <br>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Speichern</button>
+    </form>
+</div>
+        </div>
+    </div>
+</div>

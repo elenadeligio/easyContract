@@ -1,0 +1,40 @@
+<ul class="pager">
+    <li class="previous"><a href="/wikiv">&larr; Zurück</a></li>
+</ul>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-12 login-form-1">
+            <h2>Wiki Beitrag hinzufügen:</h2>
+            <div class="jumbotron">
+                <form  action="<%=`/wikiv/create`%>" method="POST">
+                    <div class="form-group">
+                        <label for="inputTopic">Topic</label>
+                        <input type="text" name="topic" id="inputTopic" class="form-control" placeholder="Topic" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputText">Text</label>
+                        <textarea class="form-control" rows="15" type="text" name="text" id="inputText" placeholder="Text..." autofocus></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAuthor">Author</label>
+                        <input type="text" name="author" id="inputAuthor" class="form-control" placeholder="Autor" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputCategory">Kategorie</label>
+                        <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" autofocus>
+                            <option>Allgemein</option>
+                            <option>Finanzen</option>
+                            <option>Beratung</option>
+                            <option>Verwaltung</option>
+                            <option>Kooperation</option>
+                            <option>Ausbildung</option>
+                            <option>Öffentlichkeit</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Speichern</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

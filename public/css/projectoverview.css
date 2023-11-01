@@ -1,0 +1,30 @@
+/* Filter */
+.container {
+    overflow: hidden;
+  }
+
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+
+  .filterDiv {
+    display: none; /* Hidden by default */
+   }
+
+/*Tabellen für Projekte: */
+  table, th, td {
+    border: 1px solid black;
+    padding-left: 5px;
+}
+
+th {
+    background-color: #1c3c74;
+    color: #fff;
+}
+
+.tableSmall {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+}

@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <span class="label label-success"><%= project.category %></span>
+
+    <h2><%= project.title %></h2>
+    <br>
+
+    <div>
+        <h4>Infos/Details übers Projekt:</h4>
+        <%= project.details %>
+    </div>
+    <br>
+    <div>
+        <h4>Fälligkeitsdatum:</h4>
+        <%= project.date %>
+    </div>
+    <br>
+    <div>
+        <h4>Notizen:</h4>
+        <%= project.notes %>
+    </div>
+
+</div>
+
+    <div class="form-group">
+        <a href="<%=`/projectoverview/${project._id}/edit`%>" class="btn btn-primary"><i class="fa fa-pencil"></i> | Projekt bearbeiten</a>
+        <a href="<%= `/projectoverview/${project._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" class="btn btn-danger"><i class="fa fa-trash"></i> | Beitrag löschen</a>
+    </div>
+

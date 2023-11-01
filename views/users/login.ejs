@@ -1,0 +1,48 @@
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-9 login-form-1">
+            <h2>Anmeldung:</h2>
+            <br>
+            <div class="jumbotron">
+            <form action="/users/login" method="POST">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                    <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" autofocus required>
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                </div>
+                    <br>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                </div>
+                <div class="form-group">
+                    <a href="#" class="ForgetPwd">Password vergessen?</a>
+                </div>
+                <br>
+            <%#
+                <div class="form-group">
+                    <a href="new" class="btn btn-success btn-block">Konto erstellen</a>
+                </div>
+             %>
+            </form>
+
+            <div class="flashes">
+                    <% if (flashMessages) { %>
+                        <% if (flashMessages.success) { %>
+                            <div class="flash success">
+                                <%= flashMessages.success %>
+                            </div>
+                        <% } else if (flashMessages.error) { %>
+                            <div class="flash error">
+                                <%= flashMessages.error %>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+        </div>
+    </div>
+</div>
+</div>

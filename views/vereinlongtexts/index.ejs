@@ -1,0 +1,1304 @@
+<span class="label label-success">Rechtsform: Verein (ausführlich)</span>
+<br>
+<br>
+<div class="row-fluid">
+    <div class="fixed cols">
+        <div class="text-left">
+            <a href="/vereinlongtexts/new" class="btn btn-primary"><i class="fa fa-plus-circle"></i> | Baustein hinzufügen</a>
+        </div>
+        <br>
+
+        <div id="accordion">
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input type="text" id="myInput" class="form-control" placeholder="Suche.." autofocus required>
+            </div>
+
+            <!-- §1 -->
+            <div class="card">
+                <div class="card-header" id="heading_1">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_1" aria-expanded="false" aria-controls="collapse_1">§ 1 Name, Sitz </button>
+                    </h5>
+                </div>
+                <div id="collapse_1" class="collapse" aria-labelledby="heading_1" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 1 Name, Sitz" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §2 -->
+            <div class="card">
+                <div class="card-header" id="heading_2">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_2" aria-expanded="false" aria-controls="collapse_2">§ 2 Zweck, Gemeinnützigkeit des Vereins </button>
+                    </h5>
+                </div>
+                <div id="collapse_2" class="collapse" aria-labelledby="heading_2" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 2 Zweck, Gemeinnützigkeit des Vereins" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §3 -->
+            <div class="card">
+                <div class="card-header" id="heading_3">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_3" aria-expanded="false" aria-controls="collapse_3">§ 3 Erwerb der Mitgliedschaft </button>
+                    </h5>
+                </div>
+                <div id="collapse_3" class="collapse" aria-labelledby="heading_3" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Antrag -->
+                    <div class="card-header" id="heading_3_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_1" aria-expanded="false" aria-controls="collapse_3_1"> ● Antrag</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_1" class="collapse" aria-labelledby="heading_3_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Antrag") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Aufnahme -->
+                    <div class="card-header" id="heading_3_2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_2" aria-expanded="false" aria-controls="collapse_3_2"> ● Erwerb der Mitgliedschaft / Aufnahme</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_2" class="collapse" aria-labelledby="heading_3_2" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Aufnahme") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Probezeit -->
+                    <div class="card-header" id="heading_3_3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_3" aria-expanded="false" aria-controls="collapse_3_3"> ● (zusätzlich): Probezeit</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_3" class="collapse" aria-labelledby="heading_3_3" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Probezeit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Gastmitgliedschaft -->
+                    <div class="card-header" id="heading_3_4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_4" aria-expanded="false" aria-controls="collapse_3_4"> ● (zusätzlich): Gastmitgliedschaft</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_4" class="collapse" aria-labelledby="heading_3_4" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Gastmitgliedschaft") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Übertragung -->
+                    <div class="card-header" id="heading_3_5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_5" aria-expanded="false" aria-controls="collapse_3_5"> ● (zusätzlich): Übertragung der Mitgliedschaft</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_5" class="collapse" aria-labelledby="heading_3_5" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Übertragung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Ehrenmitgliedschaft -->
+                    <div class="card-header" id="heading_3_6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_3_6" aria-expanded="false" aria-controls="collapse_3_6"> ● (zusätzlich): Ehrenmitgliedschaft</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_3_6" class="collapse" aria-labelledby="heading_3_6" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 3 Erwerb der Mitgliedschaft" && vereinlongtext.subcategory == "Ehrenmitgliedschaft") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- §4 -->
+            <div class="card">
+                <div class="card-header" id="heading_4">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_4" aria-expanded="false" aria-controls="collapse_4">§ 4 Beendigung der Mitgliedschaft </button>
+                    </h5>
+                </div>
+
+                <div id="collapse_4" class="collapse" aria-labelledby="heading_4" data-parent="#accordion">
+
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 4 Beendigung der Mitgliedschaft" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Erstattungsregelungen -->
+                    <div class="card-header" id="heading_4_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_4_1" aria-expanded="false" aria-controls="collapse_4_1"> ● (zusätzlich): Erstattungsregelungen</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_4_1" class="collapse" aria-labelledby="heading_4_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 4 Beendigung der Mitgliedschaft" && vereinlongtext.subcategory == "Erstattungsregelungen") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <!-- -- -->
+
+                </div>
+            </div>
+
+            <!-- §5 -->
+            <div class="card">
+                <div class="card-header" id="heading_5">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_5" aria-expanded="false" aria-controls="collapse_5">§ 5 Rechte und Pflichten der Mitglieder </button>
+                    </h5>
+                </div>
+                <div id="collapse_5" class="collapse" aria-labelledby="heading_5" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 5 Rechte und Pflichten der Mitglieder" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §6 -->
+            <div class="card">
+                <div class="card-header" id="heading_6">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_6" aria-expanded="false" aria-controls="collapse_6">§ 6 Aufnahmegebühr und Mitgliedsbeiträge </button>
+                    </h5>
+                </div>
+                <div id="collapse_6" class="collapse" aria-labelledby="heading_6" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 6 Aufnahmegebühr und Mitgliedsbeiträge" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §8 -->
+            <div class="card">
+                <div class="card-header" id="heading_8">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_8" aria-expanded="false" aria-controls="collapse_8">§ 8 Vorstand </button>
+                    </h5>
+                </div>
+                <div id="collapse_8" class="collapse" aria-labelledby="heading_8" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 8 Vorstand" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §9 -->
+            <div class="card">
+                <div class="card-header" id="heading_9">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_9" aria-expanded="false" aria-controls="collapse_9">§ 9 Aufgaben des Vorstands </button>
+                    </h5>
+                </div>
+                <div id="collapse_9" class="collapse" aria-labelledby="heading_9" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 9 Aufgaben des Vorstands" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §10 -->
+            <div class="card">
+                <div class="card-header" id="heading_10">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_10" aria-expanded="false" aria-controls="collapse_10">§ 10 Bestand des Vorstands </button>
+                    </h5>
+                </div>
+                <div id="collapse_10" class="collapse" aria-labelledby="heading_10" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Vorstandswechsel -->
+                    <div class="card-header" id="heading_10_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_1" aria-expanded="false" aria-controls="collapse_10_1"> ● Sinnvolle Regelungen zum Vorstandswechsel</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_1" class="collapse" aria-labelledby="heading_10_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Vorstandswechsel") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Voraussetzungen -->
+                    <div class="card-header" id="heading_10_2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_2" aria-expanded="false" aria-controls="collapse_10_2"> ● Voraussetzungen für die Mitgliedschaft im Vorstand</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_2" class="collapse" aria-labelledby="heading_10_2" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Voraussetzungen") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Wahl -->
+                    <div class="card-header" id="heading_10_3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_3" aria-expanded="false" aria-controls="collapse_10_3"> ● Wahl des Vorstands</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_3" class="collapse" aria-labelledby="heading_10_3" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Wahl") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Dauer -->
+                    <div class="card-header" id="heading_10_4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_4" aria-expanded="false" aria-controls="collapse_10_4"> ● Dauer des Vorstandsamts</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_4" class="collapse" aria-labelledby="heading_10_4" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Dauer") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Fortdauer -->
+                    <div class="card-header" id="heading_10_5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_5" aria-expanded="false" aria-controls="collapse_10_5"> ● Fortdauer der Amtszeit</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_5" class="collapse" aria-labelledby="heading_10_5" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Fortdauer") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Lebenszeit -->
+                    <div class="card-header" id="heading_10_6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_6" aria-expanded="false" aria-controls="collapse_10_6"> ● Vorstand auf Lebenszeit</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_6" class="collapse" aria-labelledby="heading_10_6" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Lebenszeit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Entlastung -->
+                    <div class="card-header" id="heading_10_7">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_7" aria-expanded="false" aria-controls="collapse_10_7"> ● Entlastung des Vorstands</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_7" class="collapse" aria-labelledby="heading_10_7" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Entlastung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Nachrücken -->
+                    <div class="card-header" id="heading_10_8">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_10_8" aria-expanded="false" aria-controls="collapse_10_8"> ● Nachrücken von Ersatzvorstandsmitgliedern</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_10_8" class="collapse" aria-labelledby="heading_10_8" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 10 Bestand des Vorstands" && vereinlongtext.subcategory == "Nachrücken") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- §11 -->
+            <div class="card">
+                <div class="card-header" id="heading_11">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_11" aria-expanded="false" aria-controls="collapse_11">§ 11 Vorstandssitzung </button>
+                    </h5>
+                </div>
+                <div id="collapse_11" class="collapse" aria-labelledby="heading_11" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Ladung zur Vorstandssitzung -->
+                    <div class="card-header" id="heading_11_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_1" aria-expanded="false" aria-controls="collapse_11_1"> ● Ladung zur Vorstandssitzung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_1" class="collapse" aria-labelledby="heading_11_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Ladung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Beschlussfähigkeit des Vorstands -->
+                    <div class="card-header" id="heading_11_2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_2" aria-expanded="false" aria-controls="collapse_11_2"> ● Beschlussfähigkeit des Vorstands</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_2" class="collapse" aria-labelledby="heading_11_2" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Beschlussfähigkeit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Mehrheitserfordernisse -->
+                    <div class="card-header" id="heading_11_3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_3" aria-expanded="false" aria-controls="collapse_11_3"> ● Mehrheitserfordernisse</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_3" class="collapse" aria-labelledby="heading_11_3" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Mehrheit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Vertretung bei Beschlussfassung -->
+                    <div class="card-header" id="heading_11_4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_4" aria-expanded="false" aria-controls="collapse_11_4"> ● Vertretung bei Beschlussfassung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_4" class="collapse" aria-labelledby="heading_11_4" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Vertretung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Protokollierung von Vorstandsbeschlüssen -->
+                    <div class="card-header" id="heading_11_5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_5" aria-expanded="false" aria-controls="collapse_11_5"> ● Protokollierung von Vorstandsbeschlüssen</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_5" class="collapse" aria-labelledby="heading_11_5" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Protokollierung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Vertretungsbefugnis (Innenverhältnis) -->
+                    <div class="card-header" id="heading_11_6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_6" aria-expanded="false" aria-controls="collapse_11_6"> ● Vertretungsbefugnis (Innenverhältnis)</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_6" class="collapse" aria-labelledby="heading_11_6" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Innenverhältnis") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Vertretungsbefugnis (Außenverhältnis) -->
+                    <div class="card-header" id="heading_11_7">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_7" aria-expanded="false" aria-controls="collapse_11_7"> ● Vertretungsbefugnis (Außenverhältnis)</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_7" class="collapse" aria-labelledby="heading_11_7" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Außenverhältnis") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Vertretungsbefugnis -->
+                    <div class="card-header" id="heading_11_8">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_8" aria-expanded="false" aria-controls="collapse_11_8"> ● Vertretungsbefugnis</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_8" class="collapse" aria-labelledby="heading_11_8" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Vertretungsbefugnis") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Befreiung -->
+                    <div class="card-header" id="heading_11_9">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_11_9" aria-expanded="false" aria-controls="collapse_11_9"> ● Befreiung des Vorstandes von den Beschränkungen des § 181 BGB</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_11_9" class="collapse" aria-labelledby="heading_11_9" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 11 Vorstandssitzung" && vereinlongtext.subcategory == "Befreiung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- §12 -->
+            <div class="card">
+                <div class="card-header" id="heading_12">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_12" aria-expanded="false" aria-controls="collapse_12">§ 12 Aufgaben der Mitgliederversammlung </button>
+                    </h5>
+                </div>
+                <div id="collapse_12" class="collapse" aria-labelledby="heading_12" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 12 Aufgaben der Mitgliederversammlung" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §13 -->
+            <div class="card">
+                <div class="card-header" id="heading_13">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_13" aria-expanded="false" aria-controls="collapse_13">§ 13 Einberufen der Mitgliederversammlung </button>
+                    </h5>
+                </div>
+                <div id="collapse_13" class="collapse" aria-labelledby="heading_13" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Protokoll -->
+                    <div class="card-header" id="heading_13_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_1" aria-expanded="false" aria-controls="collapse_13_1"> ● Protokoll</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_1" class="collapse" aria-labelledby="heading_13_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Protokoll") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Tonbandaufnahme -->
+                    <div class="card-header" id="heading_13_2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_2" aria-expanded="false" aria-controls="collapse_13_2"> ● (ggf.): Tonbandaufnahme</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_2" class="collapse" aria-labelledby="heading_13_2" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Tonbandaufnahme") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Einberufungsfrist -->
+                    <div class="card-header" id="heading_13_3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_3" aria-expanded="false" aria-controls="collapse_13_3"> ● (ggf.): Einberufungsfrist</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_3" class="collapse" aria-labelledby="heading_13_3" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Einberufungsfrist") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Einberufungsform -->
+                    <div class="card-header" id="heading_13_4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_4" aria-expanded="false" aria-controls="collapse_13_4"> ● (zwingend): Einberufungsform</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_4" class="collapse" aria-labelledby="heading_13_4" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Einberufungsform") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Ergänzung der Tagesordnung -->
+                    <div class="card-header" id="heading_13_5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_5" aria-expanded="false" aria-controls="collapse_13_5"> ● Ergänzung der Tagesordnung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_5" class="collapse" aria-labelledby="heading_13_5" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Ergänzung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Erneute Versammlung -->
+                    <div class="card-header" id="heading_13_6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_13_6" aria-expanded="false" aria-controls="collapse_13_6"> ● (ggf.): Erneute Versammlung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_13_6" class="collapse" aria-labelledby="heading_13_6" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 13 Einberufen der Mitgliederversammlung" && vereinlongtext.subcategory == "Versammlung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- §14 -->
+            <div class="card">
+                <div class="card-header" id="heading_14">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_14" aria-expanded="false" aria-controls="collapse_14">§ 14 Beschlussfassung der Mitgliederversammlung </button>
+                    </h5>
+                </div>
+                <div id="collapse_14" class="collapse" aria-labelledby="heading_14" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+
+                    <!-- subcategory: Leitung -->
+                    <div class="card-header" id="heading_14_1">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_1" aria-expanded="false" aria-controls="collapse_14_1"> ● Leitung der Mitgliederversammlung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_1" class="collapse" aria-labelledby="heading_14_1" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Leitung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Öffentlichkeit -->
+                    <div class="card-header" id="heading_14_2">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_2" aria-expanded="false" aria-controls="collapse_14_2"> ● (ggf.): Öffentlichkeit</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_2" class="collapse" aria-labelledby="heading_14_2" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Öffentlichkeit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Beschlussfähigkeit -->
+                    <div class="card-header" id="heading_14_3">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_3" aria-expanded="false" aria-controls="collapse_14_3"> ● Beschlussfähigkeit</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_3" class="collapse" aria-labelledby="heading_14_3" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Beschlussfähigkeit") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Mehrheitserfordernisse -->
+                    <div class="card-header" id="heading_14_4">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_4" aria-expanded="false" aria-controls="collapse_14_4"> ● Mehrheitserfordernisse</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_4" class="collapse" aria-labelledby="heading_14_4" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Mehrheitserfordernisse") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Stichentscheid -->
+                    <div class="card-header" id="heading_14_5">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_5" aria-expanded="false" aria-controls="collapse_14_5"> ● Stichentscheid bei Wahlen</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_5" class="collapse" aria-labelledby="heading_14_5" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Stichentscheid") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Stimmrecht -->
+                    <div class="card-header" id="heading_14_6">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_6" aria-expanded="false" aria-controls="collapse_14_6"> ● Stimmrecht</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_6" class="collapse" aria-labelledby="heading_14_6" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Stimmrecht") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                    <!-- subcategory: Onlineversammlung -->
+                    <div class="card-header" id="heading_14_7">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                    data-target="#collapse_14_7" aria-expanded="false" aria-controls="collapse_14_7"> ● (ggf.): Online Mitgliederversammlung</button>
+                        </h5>
+                    </div>
+
+                    <div id="collapse_14_7" class="collapse" aria-labelledby="heading_14_7" data-parent="#accordion">
+
+                        <div class="card-body scrollable" id="myDIV"> <!-- myDIV id for Search function -->
+                            <% vereinlongtexts.forEach(vereinlongtext => { %>
+                            <%if (vereinlongtext.category == "§ 14 Beschlussfassung der Mitgliederversammlung" && vereinlongtext.subcategory == "Onlineversammlung") { %>
+                                <div class="alert alert-info">
+                                    <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                    <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                    <div class="scrollable" draggable="true" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                                </div>
+                            <%}%>
+                            <% }); %>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- §15 -->
+            <div class="card">
+                <div class="card-header" id="heading_15">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_15" aria-expanded="false" aria-controls="collapse_15">(ggf.): § 15 Beirat </button>
+                    </h5>
+                </div>
+                <div id="collapse_15" class="collapse" aria-labelledby="heading_15" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 15 Beirat" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §16 -->
+            <div class="card">
+                <div class="card-header" id="heading_16">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_16" aria-expanded="false" aria-controls="collapse_16">(ggf.): § 16 Kassenprüfung/Kassenführung </button>
+                    </h5>
+                </div>
+                <div id="collapse_16" class="collapse" aria-labelledby="heading_16" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 16 Kassenprüfung" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §17 -->
+            <div class="card">
+                <div class="card-header" id="heading_17">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_17" aria-expanded="false" aria-controls="collapse_17">§ 17 Auflösung des Vereins </button>
+                    </h5>
+                </div>
+                <div id="collapse_17" class="collapse" aria-labelledby="heading_17" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 17 Auflösung des Vereins" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §19 -->
+            <div class="card">
+                <div class="card-header" id="heading_19">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_19" aria-expanded="false" aria-controls="collapse_19">§ 19 Satzungsänderungen </button>
+                    </h5>
+                </div>
+                <div id="collapse_19" class="collapse" aria-labelledby="heading_19" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 19 Satzungsänderungen" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+
+            <!-- §20 -->
+            <div class="card">
+                <div class="card-header" id="heading_20">
+                    <h5 class="mb-0">
+                        <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse_20" aria-expanded="false" aria-controls="collapse_20">§ 20 Schlussbestimmungen </button>
+                    </h5>
+                </div>
+                <div id="collapse_20" class="collapse" aria-labelledby="heading_20" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereinlongtexts.forEach(vereinlongtext => { %>
+                        <%if (vereinlongtext.category == "§ 20 Schlussbestimmungen" && vereinlongtext.subcategory == "Keine") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereinlongtexts/${vereinlongtext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereinlongtexts/${vereinlongtext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div draggable="true" class="scrollable" style="height:80px;"><%= vereinlongtext.vereinlongtext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed cols" style="width:150px;"></div>
+
+    <div class="fixed cols">
+
+        <button type="button" class="btn btn-primary" onclick="downloadDoc()"><i class="fa fa-file-word-o"></i> | docx speichern</button>
+        <button type="button" class="btn btn-primary" onclick="downloadTxt()"><i class="fa fa-file-text-o"></i> | txt speichern</button>
+        <textarea id="my-textarea"></textarea>
+        <h6><i>TIPP: Texteingabefeld kann durch Ziehen der
+                <br>rechten unteren Ecke vergrößert werden.</i></h6>
+    </div>
+
+</div>

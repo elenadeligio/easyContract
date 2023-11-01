@@ -1,0 +1,18 @@
+<span class="label label-success">Rechtsform: gGmbH</span>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-16 login-form-1">
+            <h2>Baustein bearbeiten:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="<%=`/gmbhtexts/${gmbhtext._id}/update?_method=PUT`%>" method="POST">
+
+                <div class="form-group">
+                    <textarea style="height:300px" type="gmbhtext" name="gmbhtext" id="inputGmbhtext" class="form-control"  placeholder="Text..." autofocus><%= gmbhtext.gmbhtext %></textarea>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Änderungen speichern</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

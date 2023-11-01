@@ -1,0 +1,181 @@
+<span class="label label-success">Rechtsform: Verein</span>
+<br>
+<br>
+<div class="row-fluid">
+    <div class="fixed cols">
+        <div class="text-left">
+            <a href="/vereintexts/new" class="btn btn-primary"><i class="fa fa-plus-circle"></i> | Baustein hinzufügen</a>
+        </div>
+        <br>
+
+        <div id="accordion">
+            <div class="input-group margin-bottom-sm">
+                <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                <input type="text" id="myInput" class="form-control" placeholder="Suche.." autofocus required>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">§ 1 Name, Sitz </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body scrollable" id="myDIV">
+                        <% vereintexts.forEach(vereintext => { %>
+                        <%if (vereintext.category == "§ 1 Name, Sitz") { %>
+                            <div class="alert alert-info">
+                                <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                                <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                                <div class="scrollable" draggable="true" style="height:80px;"><%= vereintext.vereintext %> </div>
+                            </div>
+                        <%}%>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">§ 2 Zweck </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 2 Zweck") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div draggable="true" class="scrollable" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">§ 3 Mitgliedschaft </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 3 Mitgliedschaft") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div draggable="true" class="scrollable" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">§ 4 Vorstand </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 4 Vorstand") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div draggable="true" class="scrollable" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">§ 5 Mitgliederversammlung </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 5 Mitgliederversammlung") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div draggable="true" class="scrollable" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h5 class="mb-0">
+                    <button draggable="true" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">§ 6 Auflösung, Anfall des Vereinsvermögens </button>
+                </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 6 Auflösung, Anfall des Vereinsvermögens") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div draggable="true" class="scrollable" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" draggable="true" data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">§ 7 Schlussbestimmung </button>
+                </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                <div class="card-body scrollable" id="myDIV">
+                    <% vereintexts.forEach(vereintext => { %>
+                    <%if (vereintext.category == "§ 7 Schlussbestimmung") { %>
+                        <div class="alert alert-info">
+                            <a href="<%= `vereintexts/${vereintext._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" ><i class="fa fa-times"></i></a>
+                            <a href="<%=`vereintexts/${vereintext._id}/edit` %>"><i class="fa fa-pencil"></i></a>
+                            <div class="scrollable" draggable="true" style="height:80px;"><%= vereintext.vereintext %> </div>
+                        </div>
+                    <%}%>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="fixed cols" style="width:150px;"></div>
+
+    <div class="fixed cols"> 
+        <button type="button" class="btn btn-primary" onclick="downloadDoc()"><i class="fa fa-file-word-o"></i> | docx speichern</button>
+        <button type="button" class="btn btn-primary" onclick="downloadTxt()"><i class="fa fa-file-text-o"></i> | txt speichern</button>
+        <textarea id="my-textarea"></textarea>
+        <h6><i>TIPP: Texteingabefeld kann durch Ziehen der
+                <br>rechten unteren Ecke vergrößert werden.</i></h6>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<span class="label label-success">Rechtsform: Verein (ausführlich)</span>
+<ul class="pager">
+    <li class="previous"><a href="/vereinlongtexts">&larr; Zurück</a></li>
+</ul>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-16 login-form-1">
+            <h2>Neuen Baustein erstellen:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="<%=`/vereinlongtexts/create`%>" method="POST">
+                <div class="form-group">
+                    <textarea class="form-control" rows="15" type="vereinlongtext" name="vereinlongtext" id="inputVereinlongtext" placeholder="Text..." autofocus></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputCategory">Kategorie (§)</label>
+                    <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" autofocus>
+                        <option>§ 1 Name, Sitz</option>
+                        <option>§ 2 Zweck, Gemeinnützigkeit des Vereins</option>
+                        <option>§ 3 Erwerb der Mitgliedschaft</option>
+                        <option>§ 4 Beendigung der Mitgliedschaft</option>
+                        <option>§ 5 Rechte und Pflichten der Mitglieder</option>
+                        <option>§ 6 Aufnahmegebühr und Mitgliedsbeiträge</option>
+                        <option>§ 8 Vorstand</option>
+                        <option>§ 9 Aufgaben des Vorstands</option>
+                        <option>§ 10 Bestand des Vorstands</option>
+                        <option>§ 11 Vorstandssitzung</option>
+                        <option>§ 12 Aufgaben der Mitgliederversammlung</option>
+                        <option>§ 13 Einberufen der Mitgliederversammlung</option>
+                        <option>§ 14 Beschlussfassung der Mitgliederversammlung</option>
+                        <option>§ 15 Beirat</option>
+                        <option>§ 16 Kassenprüfung</option>
+                        <option>§ 17 Auflösung des Vereins</option>
+                        <option>§ 19 Satzungsänderungen</option>
+                        <option>§ 20 Schlussbestimmungen</option>
+                    </select>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Speichern</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,18 @@
+<span class="label label-success">Rechtsform: gUG (haftungsbeschränkt)</span>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-16 login-form-1">
+            <h2>Baustein bearbeiten:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="<%=`/ugtexts/${ugtext._id}/update?_method=PUT`%>" method="POST">
+
+                <div class="form-group">
+                    <textarea style="height:300px" type="ugtext" name="ugtext" id="inputUgtext" class="form-control"  placeholder="Text..." autofocus><%= ugtext.ugtext %></textarea>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Änderungen speichern</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

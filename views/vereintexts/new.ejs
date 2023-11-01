@@ -1,0 +1,31 @@
+<span class="label label-success">Rechtsform: Verein</span>
+<ul class="pager">
+    <li class="previous"><a href="/vereintexts">&larr; Zurück</a></li>
+</ul>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-16 login-form-1">
+            <h2>Neuen Baustein erstellen:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="<%=`/vereintexts/create`%>" method="POST">
+                <div class="form-group">
+                    <textarea class="form-control" rows="15" type="vereintext" name="vereintext" id="inputVereintext" placeholder="Text..." autofocus></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputCategory">Kategorie</label>
+                    <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" autofocus>
+                        <option>§ 1 Name, Sitz</option>
+                        <option>§ 2 Zweck</option>
+                        <option>§ 3 Mitgliedschaft</option>
+                        <option>§ 4 Vorstand</option>
+                        <option>§ 5 Mitgliederversammlung</option>
+                        <option>§ 6 Auflösung, Anfall des Vereinsvermögens</option>
+                        <option>§ 7 Schlussbestimmung</option>
+                    </select>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Speichern</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

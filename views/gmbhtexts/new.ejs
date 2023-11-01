@@ -1,0 +1,41 @@
+<span class="label label-success">Rechtsform: gGmbH</span>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-16 login-form-1">
+            <h2>Neuen Baustein erstellen:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="<%=`/gmbhtexts/create`%>" method="POST">
+                <div class="form-group">
+                    <textarea class="form-control" rows="15" type="gmbhtext" name="gmbhtext" id="inputGmbhtext" placeholder="Text..." autofocus></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inputCategory">Kategorie</label>
+                    <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" autofocus>
+                        <option>§ 1 Firma und Sitz</option>
+                        <option>§ 2 Gegenstand</option>
+                        <option>§ 3 Stammkapital und Geschäftsanteile</option>
+                        <option>§ 4 Verfügung über Geschäftsanteile</option>
+                        <option>§ 5 Einziehung, Amortisation</option>
+                        <option>§ 6 Abfindung ausscheidender Gesellschafter</option>
+                        <option>§ 7 Geschäftsführer</option>
+                        <option>§ 8 Vertreter</option>
+                        <option>§ 9 Gesellschafterversammlungen</option>
+                        <option>§ 10 Gesellschafterbeschlüsse</option>
+                        <option>§ 11 Geschäftsjahr</option>
+                        <option>§ 12 Jahresabschluss, Ergebnisverwendung</option>
+                        <option>§ 13 Wettbewerbsverbot</option>
+                        <option>§ 14 Dauer der Gesellschaft</option>
+                        <option>§ 15 Kündigung der Gesellschaft</option>
+                        <option>§ 16 Tod eines Gesellschafters</option>
+                        <option>§ 17 Beendigung der Gesellschaft</option>
+                        <option>§ 18 Gründungsaufwand</option>
+                        <option>§ 19 Schlichtungs-/ Mediationsvereinbarung</option>
+                        <option>§ 20 Salvatorische Klausel</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" type="submit">Baustein speichern</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

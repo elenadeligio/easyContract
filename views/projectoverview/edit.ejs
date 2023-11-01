@@ -1,0 +1,36 @@
+<div class="data-form">
+    <form class="form-signin" action="<%=`/projectoverview/${project._id}/update?_method=PUT`%>" method="POST">
+        <h2 class="form-signin-heading">Projekt bearbeiten:</h2>
+
+        <div class="jumbotron">
+        <label for="inputTitle">Titel</label>
+        <input type="text" name="title" id="inputTitle" class="form-control" value="<%= project.title %>" autofocus>
+        <label for="inputDetails">Infos/Details übers Projekt</label>
+        <input type="text" name="details" id="inputDetails" class="form-control" value="<%= project.details %>"
+            autofocus>
+        <label for="inputDate">Fälligkeitsdatum</label>
+        <input type="text" name="date" id="inputDate" class="form-control" value="<%= project.date %>" autofocus>
+        <label for="inputNotes">Notizen</label>
+        <div class="form-group">
+            <textarea style="height:300px" name="notes" id="inputNotes" class="form-control"  autofocus><%= project.notes %></textarea>
+        </div>
+
+
+        <div class="form-group">
+            <label for="inputCategory">Kategorie</label>
+            <select class="form-control" name="category" id="inputCategory" placeholder="Kategorie" value="<%= project.category %>" autofocus>
+                    <option>Allgemein</option>
+                    <option>Finanzen</option>
+                    <option>Beratung</option>
+                    <option>Verwaltung</option>
+                    <option>Kooperation</option>
+                    <option>Ausbildung</option>
+                    <option>Öffentlichkeit</option>
+                    <option>Erledigt</option>
+            </select>
+        </div>
+    </div>
+
+        <br /><button class="btn btn-lg btn-primary btn-block" type="submit">Änderungen speichern</button>
+    </form>
+</div>

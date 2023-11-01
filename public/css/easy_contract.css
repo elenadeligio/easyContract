@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #625a56;
+    background:#f5f5f5;
+}
+
+.footer {
+    height:40px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    margin-left: 10px;
+}
+
+.data-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.data-form label {
+    margin: 5px 0 0 0;
+}
+
+.hidden-text {
+    -webkit-text-security: disc;
+}
+
+.flash {
+    background: #ced7d8;
+    color: #625a56;
+    width: 100%;
+    text-align: center;
+    padding: 10px 30px;
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+}
+
+.error {
+    color: #fff;
+    background: rgba(209, 46, 42, 0.7);
+}
+
+.login {
+    position: absolute;
+    right: 15px;
+    top: -9px;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1c3c74;
+}
+
+.login p {
+    margin: 0 0 3px;
+}
+
+.log-out {
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+@media (max-width: 760px) {
+    .login {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 2vw;
+    }
+}
+
+/* Sidebar */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#logo {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background:#f3f6fb;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+    box-shadow: inset -1px 0px 0px 0px #DDDDDD;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.sidebar-brand {
+    border-bottom: 1px solid rgba(102, 97, 91, 0.3);
+}
+
+.sidebar-brand {
+    padding: 18px 0px;
+    margin: 0 20px;
+}
+
+.navbar .navbar-nav > li > a p {
+    display: inline-block;
+    margin: 0;
+}
+p {
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+.navbar-default {
+    background-color: #f5f5f5;
+    border:0px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+btn-menu {
+    border-radius: 3px;
+    padding: 4px 12px;
+    margin: 14px 5px 5px 20px;
+    font-size: 14px;
+    float: left;
+}
+
+/* for contract tool */
+textarea {
+    width: 50em;
+    height: 45em;
+    border: 1px solid #cccccc;
+    padding: 0.5em;
+    margin-top: 20px;
+    font-family: Tahoma, sans-serif;
+}
+.cols {
+    min-height:300px;
+}
+.fixed {
+    width: 350px;
+    float: left;
+}
+.scrollable{
+    overflow-y: auto;
+    max-height: 300px;
+}

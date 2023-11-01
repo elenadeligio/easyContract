@@ -1,0 +1,19 @@
+<ul class="pager">
+<li class="previous"><a href="/wikiv">&larr; Zurück</a></li>
+</ul>
+<div class="jumbotron">
+    <span class="label label-success"><%= wiki.category %></span>
+
+    <h2><%= wiki.topic %></h2>
+    <br>
+    <div>
+        <%= wiki.text%>
+    </div>
+</div>
+
+    <div class="form-group">
+        <a href="<%=`/wikiv/${wiki._id}/edit`%>" class="btn btn-primary"><i class="fa fa-pencil"></i> | Beitrag bearbeiten</a>
+        <a href="<%= `/wikiv/${wiki._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" class="btn btn-danger"><i class="fa fa-trash"></i> | Beitrag löschen</a>
+    </div>
+
+

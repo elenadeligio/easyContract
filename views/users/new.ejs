@@ -1,0 +1,44 @@
+<ul class="pager">
+    <li class="previous"><a href="/users">&larr; Zurück</a></li>
+</ul>
+<div class="data-form">
+    <div class="row">
+        <div class="col-md-10 login-form-1">
+            <h2>Benutzer hinzufügen:</h2>
+            <div class="jumbotron">
+            <form class="form-signin" action="/users/create" method="POST">
+
+        <div class="form-group">
+            <label for="inputFirstName">Vorname</label>
+            <input type="text" name="first" pattern="^[._a-zA-Z0-9]{3,}"  id="inputFirstName" class="form-control" placeholder="Vorname" autofocus>
+        </div>
+        <div class="form-group">
+            <label for="inputLastName">Nachname</label>
+            <input type="text" name="last" pattern="^[._a-zA-Z0-9]{3,}"  id="inputLastName" class="form-control" placeholder="Nachname">
+        </div>
+        <div class="form-group">
+            <label for="inputEmail">Email Addresse</label>
+            <input type="email" name="email"
+            oninvalid="this.setCustomValidity('E-Mail is not valid.')",
+            onchange="try{setCustomValidity('')}catch(e){}",
+            oninput="setCustomValidity(' ')",
+            pattern="(?![_.-])((?![_.-][_.-])[\w.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}",
+            id="inputEmail" class="form-control" placeholder="Email Addresse" required>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Passwort</label>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Passwort" required>
+        </div>
+        <div class="form-group">
+             <label for="inputRole">Rolle</label>
+             <select class="form-control" name="role" id="inputRole" placeholder="Rolle" autofocus>
+              <option>Admin</option>
+              <option>Basic</option>
+             </select>
+        </div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Speichern</button>
+    </form>
+            </div>
+        </div>
+    </div>
+</div>

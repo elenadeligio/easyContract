@@ -1,0 +1,72 @@
+<h2 class="center">Wiki:</h2>
+
+<div class="jumbotron">
+<div class="text-right">
+    <a href="/wikiv/new" class="btn btn-primary"><i class="fa fa-plus-circle"></i> | Wiki Beitrag hinzufügen</a>
+</div>
+
+
+<select class="form-control" id="choice" style="width: 10%;">
+    <option value>Alle</option>
+    <option value="Allgemein">Allgemein</option>
+    <option value="Finanzen">Finanzen</option>
+    <option value="Beratung">Beratung</option>
+    <option value="Verwaltung">Verwaltung</option>
+    <option value="Kooperation">Kooperation</option>
+    <option value="Ausbildung">Ausbildung</option>
+    <option value="Öffentlichkeit">Öffentlichkeit</option>
+</select>
+
+<br>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>Titel</th>
+        <th>Von</th>
+        <th>Kategorie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% wikiv.forEach(wiki => { %>
+        <tr>
+            <td>
+                <a href="<%= `/wikiv/${wiki._id}` %>" target="_blank"><%= wiki.topic %></a>
+            </td>
+
+            <td>
+                <%= wiki.author %>
+            </td>
+            <td class="type">
+                <span class="label label-success"><%= wiki.category%></span>
+            </td>
+            <td>
+                <a href="<%=`wikiv/${wiki._id}/edit` %>" tool-tip-toggle="tooltip-demo" data-original-title="Bearbeiten"><i class="fa fa-pencil fa-lg"></i></a>
+                <a href="<%= `wikiv/${wiki._id}/delete?_method=DELETE` %>" onclick="return confirm('Wollen Sie es wirklich löschen?')" tool-tip-toggle="tooltip-demo" data-original-title="Löschen"><i class="fa fa-trash fa-lg"></i></a>
+            </td>
+        </tr>
+    <% }); %>
+    </tbody>
+</table>
+
+</div>
+
+
+<script>
+    //filter
+    $("#choice").change(function(){
+        var choice = $(this).val().toUpperCase();
+        $("table tr").each(function (index) {
+            if (index !== 0) {
+                $row = $(this);
+                var id = $row.find("td.type").text().toUpperCase();
+                if (id.indexOf(choice) == -1) {
+                    $row.hide();
+                }
+                else {
+                    $row.show();
+                }
+            }
+        });
+    });
+</script>

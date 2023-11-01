@@ -1,0 +1,59 @@
+<title>easyContract</title>
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/easy_contract.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<div class="jumbotron" style="width:800px; margin-left: 300px; margin-top: 100px; box-shadow: 10px 10px 5px grey;">
+    <div class="data-form" style="margin-left: 180px;">
+        <div class="row">
+            <div class="col-md-9 login-form-1">
+                <img src = "/img/logo_blau.png" id="logo" style="margin-left: 100px;">
+                <br>
+                <form action="/users/login" method="POST">
+                    <div class="input-group margin-bottom-sm" style="margin-top: 30px">
+                        <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+                        <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" autofocus required>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Passwort" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Login</button>
+                    </div>
+                    <!--
+                    <div class="form-group">
+                        <a href="#" class="ForgetPwd">Password vergessen?</a>
+                    </div>
+                    <br>
+                        <div class="form-group">
+                            <a href="new" class="btn btn-success btn-block">Konto erstellen</a>
+                        </div>
+                   -->
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="flashes">
+    <% if (flashMessages) { %>
+        <% if (flashMessages.success) { %>
+            <div class="flash success">
+                <%= flashMessages.success %>
+            </div>
+        <% } else if (flashMessages.error) { %>
+            <div class="flash error">
+                <%= flashMessages.error %>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+
+<div class="footer" style="text-align: center">  © 2022 easyContract </div>
+
